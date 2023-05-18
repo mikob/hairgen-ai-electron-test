@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' 'unsafe-inline' http://localhost:3000 https://www.hairgen.ai">
+  <title>Hello World!</title>
+  <style>
+    html,
+    body {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      background-color: #0e043a;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hello World!</h1>
+  We are using Node.js <span id="node-version"></span>,
+  Chromium <span id="chrome-version"></span>,
+  and Electron <span id="electron-version"></span>.
+  <div style="display: flex; height: 100%; width: 100%; flex-direction: column; overflow: hidden">
+    <iframe src="https://www.hairgen.ai/studio/embed?token=..."
+      style="flex-grow: 1; border: none; margin: 0; padding: 0;"></iframe>
+    <!-- <iframe src="http://localhost:3000/studio/embed?token=..."
+      style="flex-grow: 1; border: none; margin: 0; padding: 0;"></iframe> -->
+  </div>
+</body>
+
+</html>
